@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lrinfinitescroll by lorenzofox3</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Lrinfinitescroll</h1>
+        <p class="header">directive to register handler when an element is scrolled down near its end</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/lorenzofox3/lrInfiniteScroll/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/lorenzofox3/lrInfiniteScroll/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/lorenzofox3/lrInfiniteScroll">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/lorenzofox3">lorenzofox3</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="lrinfinitescroll" class="anchor" href="#lrinfinitescroll"><span class="octicon octicon-link"></span></a>lrInfiniteScroll</h1>
+
+<p>It is a module for <a href="http://angularjs.org/">AngularJS</a> which allow you to attach an event handler to the element when this element
+has been scrolled almost to its bottom. In most of the case it will be used for infinite scrolling.
+It is very light (about 45 lines of code) and optimized to reduce the amount of $digest loop.</p>
+
+<h2>
+<a name="attach-an-event-handler" class="anchor" href="#attach-an-event-handler"><span class="octicon octicon-link"></span></a>Attach an event handler</h2>
+
+<p>simply set as attribute a function accessible within the $scope</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;ul</span> <span class="na">lr-infinite-scroll=</span><span class="s">"myEventHandler"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">"item in myCollection"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+
+<h2>
+<a name="change-the-scroll-threshold" class="anchor" href="#change-the-scroll-threshold"><span class="octicon octicon-link"></span></a>Change the scroll threshold</h2>
+
+<p>By default the handler will be called when the user is scrolling <em>down</em> and only <em>50</em> pixels are remaining before reaching the end
+of the element. You can overwrite the 50px by setting the attribute <em>scroll-threshold</em></p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;ul</span> <span class="na">lr-infinite-scroll=</span><span class="s">"myEventHandler"</span> <span class="na">scroll-threshold=</span><span class="s">"200"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">"item in myCollection"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+
+<h2>
+<a name="change-the-time-threshold" class="anchor" href="#change-the-time-threshold"><span class="octicon octicon-link"></span></a>Change the time threshold</h2>
+
+<p>To reduce the amount of $digest loop, instead of calling the handler whenever a scroll down event is detected in the end zone. A time is started and if
+no other event is detected within 400ms, then the handler is called. You can overwrite the time value by setting the <em>time-threshold</em> attribute.</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;ul</span> <span class="na">lr-infinite-scroll=</span><span class="s">"myEventHandler"</span> <span class="na">scroll-threshold=</span><span class="s">"200"</span> <span class="na">time-threshold=</span><span class="s">"600"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">"item in myCollection"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>lrInfinite scroll module is under MIT license:</p>
+
+<blockquote>
+<p>Copyright (C) 2013 Laurent Renard.</p>
+
+<p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation files
+(the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
