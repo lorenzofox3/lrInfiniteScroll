@@ -4,6 +4,8 @@ It is a module for [AngularJS](http://angularjs.org/) which allow you to attach 
 has been scrolled almost to its bottom. In most of the case it will be used for infinite scrolling.
 It is very light (about 45 lines of code) and optimized to reduce the amount of $digest loop.
 
+See the [example section](http://lorenzofox3.github.io/lrInfiniteScroll/index.html#example)
+
 ## Attach an event handler
 
 simply set as attribute a function accessible within the $scope
