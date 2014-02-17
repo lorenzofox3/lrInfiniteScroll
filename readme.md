@@ -19,7 +19,7 @@ simply set as attribute a function accessible within the $scope
 By default the handler will be called when the user is scrolling *down* and only *50* pixels are remaining before reaching the end
 of the element. You can overwrite the 50px by setting the attribute *scroll-threshold*
 
-```markup
+```html
 <ul lr-infinite-scroll="myEventHandler" scroll-threshold="200">
     <li ng-repeat="item in myCollection">
 </ul>
