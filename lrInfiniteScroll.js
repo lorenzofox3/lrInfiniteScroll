@@ -8,16 +8,11 @@
                 var
                     lengthThreshold = attr.scrollThreshold || 50,
                     timeThreshold = attr.timeThreshold || 400,
-                    handler = scope.$eval(attr.lrInfiniteScroll),
                     promise = null,
                     lastRemaining = 9999;
 
                 lengthThreshold = parseInt(lengthThreshold, 10);
                 timeThreshold = parseInt(timeThreshold, 10);
-
-                if (!handler || !ng.isFunction(handler)) {
-                    handler = ng.noop;
-                }
 
                 element.bind('scroll', function () {
                     var
@@ -31,7 +26,7 @@
                             timeout.cancel(promise);
                         }
                         promise = timeout(function () {
-                            handler();
+                            scope.$apply(attr.lrInfiniteScroll);
                             promise = null;
                         }, timeThreshold);
                     }
