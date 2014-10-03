@@ -16,6 +16,16 @@ simply set as attribute a function accessible within the $scope
 </ul>
 ```
 
+## Set inverse scroll direction
+
+Set if scrolling from bottom to top so the event handler will be called when scrolled almost to the top.
+
+```html
+<ul lr-infinite-scroll="myEventHandler" scroll-inverse="1">
+    <li ng-repeat="item in myCollection">
+</ul>
+```
+
 ## Change the scroll threshold
 
 By default the handler will be called when the user is scrolling *down* and only *50* pixels are remaining before reaching the end
