@@ -21,7 +21,7 @@ simply set as attribute a function accessible within the $scope
 Set if scrolling from bottom to top so the event handler will be called when scrolled almost to the top.
 
 ```html
-<ul lr-infinite-scroll="myEventHandler" scroll-inverse="1">
+<ul lr-infinite-scroll-inverse="myEventHandler">
     <li ng-repeat="item in myCollection">
 </ul>
 ```
