@@ -1,8 +1,8 @@
 # lrInfiniteScroll
 
 It is a module for [AngularJS](http://angularjs.org/) which allow you to attach an event handler to the element when this element
-has been scrolled almost to its bottom. In most of the case it will be used for infinite scrolling.
-It is very light (about 45 lines of code) and optimized to reduce the amount of $digest loop.
+has been scrolled almost to its bottom or top (or both). In most of the case it will be used for infinite scrolling.
+It is very light (about 70 lines of code) and optimized to reduce the amount of $digest loop.
 
 See the [example section](http://lorenzofox3.github.io/lrInfiniteScroll/index.html#example)
 
@@ -21,7 +21,7 @@ simply set as attribute a function accessible within the $scope
 Set if scrolling from bottom to top so the event handler will be called when scrolled almost to the top.
 
 ```html
-<ul lr-infinite-scroll="myEventHandler" scroll-inverse="1">
+<ul lr-infinite-scroll-inverse="myEventHandler">
     <li ng-repeat="item in myCollection">
 </ul>
 ```
