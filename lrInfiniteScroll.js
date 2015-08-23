@@ -45,7 +45,7 @@
                     }
                     lastRemaining = remaining;
 
-                    if (remainingInverse && remainingInverse < lengthThreshold && (remainingInverse - lastRemainingInverse) < 0) {
+                    if (remainingInverse !== null && remainingInverse < lengthThreshold && (remainingInverse - lastRemainingInverse) < 0) {
                         //if there is already a timer running which has no expired yet we have to cancel it and restart the timer
                         if (promise !== null) {
                             $timeout.cancel(promise);
