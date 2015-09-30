@@ -1,0 +1,16 @@
+{
+  "name": "lr-infinite-scroll",
+  "version": "1.0.0",
+  "description": "Directive to register handler when an element is scrolled down near its end",
+  "browser": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenzofox3/lrInfiniteScroll.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lorenzofox3/lrInfiniteScroll/issues"
+  },
+  "homepage": "https://github.com/lorenzofox3/lrInfiniteScroll#readme"
+}
