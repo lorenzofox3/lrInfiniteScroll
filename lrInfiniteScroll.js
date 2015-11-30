@@ -37,6 +37,10 @@
                     }
                     lastRemaining = remaining;
                 });
+
+                scope.$on('$destroy', function () {
+                    element.unbind();
+                });
             }
 
         };
