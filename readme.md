@@ -1,14 +1,13 @@
 # lrInfiniteScroll
 
-It is a module for [AngularJS](http://angularjs.org/) which allow you to attach an event handler to the element when this element
-has been scrolled almost to its bottom. In most of the case it will be used for infinite scrolling.
+lrInfiniteScroll is a module for [AngularJS](http://angularjs.org/) which allow you to attach an event handler to the element when this element has been scrolled almost to its bottom. In most of the case it will be used for infinite scrolling.
 It is very light (about 45 lines of code) and optimized to reduce the amount of $digest loop.
 
-See the [example section](http://lorenzofox3.github.io/lrInfiniteScroll/index.html#example)
+See the [example section](http://lorenzofox3.github.io/lrInfiniteScroll/index.html#example).
 
-## Attach an event handler
+## Attach an Event Handler
 
-simply set as attribute a function accessible within the $scope
+Simply set as attribute a function accessible within the $scope:
 
 ```html
 <ul lr-infinite-scroll="myEventHandler">
@@ -16,20 +15,21 @@ simply set as attribute a function accessible within the $scope
 </ul>
 ```
 
-## Change the scroll threshold
+## Change the Scroll Threshold
 
 By default the handler will be called when the user is scrolling *down* and only *50* pixels are remaining before reaching the end
-of the element. You can overwrite the 50px by setting the attribute *scroll-threshold*
+of the element. You can overwrite the 50px by setting the attribute *scroll-threshold*:
 
 ```html
 <ul lr-infinite-scroll="myEventHandler" scroll-threshold="200">
     <li ng-repeat="item in myCollection">
 </ul>
 ```
-## Change the time threshold
+## Change the Time Threshold
 
-To reduce the amount of $digest loop, instead of calling the handler whenever a scroll down event is detected in the end zone. A time is started and if
-no other event is detected within 400ms, then the handler is called. You can overwrite the time value by setting the *time-threshold* attribute.
+To reduce the amount of $digest loop, instead of calling the handler whenever a scroll down event is detected in the end zone a timer is started and if no other event is detected within 400ms, then the handler is called.
+
+You can overwrite the time value by setting the *time-threshold* attribute:
 
 ```html
 <ul lr-infinite-scroll="myEventHandler" scroll-threshold="200" time-threshold="600">
